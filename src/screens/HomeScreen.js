@@ -5,7 +5,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/Cairos_logo.jpg')}
+        source={require('../../assets/Cairos_logo.jpg')}
         style={styles.logo}
       />
       <Text style={styles.title}>Cairo's Kitchen</Text>
