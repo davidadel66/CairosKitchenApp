@@ -8,7 +8,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'C:\Users\David\CairosKitchenApp\src\screens\213049336_3380003705561238_8529529972628218053_n.jpg' }}
+        source={{ url: './Cairos_logo.jpg' }}
         style={styles.logo}
       />
       <Text style={styles.title}>Cairo's Kitchen</Text>
