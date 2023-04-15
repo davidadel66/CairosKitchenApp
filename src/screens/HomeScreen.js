@@ -1,26 +1,24 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { Image, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
-    return (
-      <View style={styles.container}>
-        <Image
-          source={require('../assets/Cairos_logo.jpg')}
-          style={styles.logo}
-        />
-        <Text style={styles.title}>Cairo's Kitchen</Text>
-        <Text style={styles.subtitle}>Authentic Egyptian Cuisine</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('MenuScreen')}
-        >
-          <Text style={styles.buttonText}>View Menu</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  };
-
+  return (
+    <View style={styles.container}>
+      <Image
+        source={require('../assets/Cairos_logo.jpg')}
+        style={styles.logo}
+      />
+      <Text style={styles.title}>Cairo's Kitchen</Text>
+      <Text style={styles.subtitle}>Authentic Egyptian Cuisine</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('MenuScreen')}
+      >
+        <Text style={styles.buttonText}>View Menu</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
