@@ -1,26 +1,37 @@
 import React from 'react';
 import { ImageBackground, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
 
-const HomeScreen = ({ navigation }) => {
-  return (
-    <ImageBackground
-      source={require('../../assets/HomeScreen_Background_pic.jpg')}
-      style={styles.background}
-      resizeMode="cover"
-    >
-      <View style={styles.container}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('MenuScreen')}
-          >
-            <Text style={styles.buttonText}>View Our Menu</Text>
-          </TouchableOpacity>
+const HomeScreen = () => {
+    const navigation = useNavigation();
+  
+    return (
+      <ImageBackground
+        source={require('../../assets/HomeScreen_Background_pic.jpg')}
+        style={styles.background}
+        resizeMode="cover"
+      >
+        <View style={styles.container}>
+          <View style={styles.drawerIconContainer}>
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Ionicons name="menu" size={32} color="white" />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('MenuScreen')}
+            >
+              <Text style={styles.buttonText}>VIEW MENU</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
-    </ImageBackground>
-  );
-};
+      </ImageBackground>
+    );
+  };
+
+
 
 const styles = StyleSheet.create({
   background: {
@@ -49,6 +60,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
   },
+  header: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    paddingTop: Platform.OS === 'ios' ? 50 : 20,
+    paddingHorizontal: 10,
+    width: '100%',
+    zIndex: 2,
+  },  
 });
 
 export default HomeScreen;
