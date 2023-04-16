@@ -2,11 +2,12 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from './screens/HomeScreen';
-import MenuScreen from './screens/MenuScreen';
-import AboutUsScreen from './screens/AboutUsScreen';
-import CateringScreen from './screens/CateringScreen';
-import ContactScreen from './screens/ContactScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import MenuScreen from './src/screens/MenuScreen';
+import AboutUsScreen from './src/screens/AboutUsScreen';
+import CateringScreen from './src/screens/CateringScreen';
+import ContactScreen from './src/screens/ContactScreen';
+
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();

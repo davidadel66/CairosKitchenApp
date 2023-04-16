@@ -59,15 +59,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 20,
-  },
-  header: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    paddingTop: Platform.OS === 'ios' ? 50 : 20,
-    paddingHorizontal: 10,
-    width: '100%',
-    zIndex: 2,
   },  
 });
 
