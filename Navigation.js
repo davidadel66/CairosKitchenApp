@@ -17,7 +17,7 @@ function MenuStackNavigator() {
       <Stack.Screen
         name="MenuScreen"
         component={MenuScreen}
-        options={{ title: 'Menu' }}
+        options={{ title: 'Menu', headerShown: false }} // Add headerShown: false
       />
       {/* Add other related screens to the stack here */}
     </Stack.Navigator>
