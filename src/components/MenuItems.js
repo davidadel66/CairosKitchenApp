@@ -5,7 +5,7 @@ const menuItems = [
       description: "Description of item 1",
       price: 9.99,
     //   imageUrl: "https://example.com/images/item1.jpg",
-      category: "Category 1",
+      category: "Bites to Share",
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ const menuItems = [
       description: "Description of item 2",
       price: 12.99,
     //   imageUrl: "https://example.com/images/item2.jpg",
-      category: "Category 1",
+      category: "Sandwiches and Wraps",
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ const menuItems = [
       description: "Description of item 3",
       price: 7.99,
     //   imageUrl: "https://example.com/images/item3.jpg",
-      category: "Category 2",
+      category: "Main Events",
     },
     // Add more items as needed
   ];
