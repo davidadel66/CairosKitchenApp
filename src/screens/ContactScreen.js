@@ -17,7 +17,7 @@ const ContactScreen = () => {
       };
   
       axios
-        .post('https://tidy-node-383920.ue.r.appspot.com/api/contact', data)
+        .post('https://tidy-node-383920.ue.r.appspot.com/api/send-email', data)
         .then((response) => {
           console.log('SUCCESS!', response.status, response.data);
           // Show success message or perform further actions
