@@ -40,7 +40,7 @@ const ContactScreen = () => {
       <TextInput
         style={styles.input}
         onChangeText={setLastName}
-        value={lastName}
+        value={lastName}    
         placeholder="Last Name"
       />
       <TextInput
