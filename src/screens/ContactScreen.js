@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import emailjs from 'emailjs-com';
+import axios from 'axios';
 
 const ContactScreen = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = () => {
-    const templateParams = {
-      from_name: `${firstName} ${lastName}`,
-      from_email: email,
-      message: message,
-    };
-
-    emailjs
-      .send('CairosKitchen', 'template_gd6cm2e', templateParams, 'Cairos Kitchen')
-      .then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+  
+    const handleSubmit = () => {
+      const data = {
+        firstName,
+        lastName,
+        email,
+        message,
+      };
+  
+      axios
+        .post('https://tidy-node-383920.ue.r.appspot.com/api/contact', data)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.data);
           // Show success message or perform further actions
-        },
-        (error) => {
+        })
+        .catch((error) => {
           console.log('FAILED...', error);
           // Show error message or perform further actions
-        }
-      );
-  };
+        });
+    };
 
   return (
     <View style={styles.container}>
