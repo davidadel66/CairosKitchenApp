@@ -6,7 +6,6 @@ import HomeScreen from './src/screens/HomeScreen';
 import MenuScreen from './src/screens/MenuScreen';
 import AboutUsScreen from './src/screens/AboutUsScreen';
 import CateringScreen from './src/screens/CateringScreen';
-import ContactScreen from './src/screens/ContactScreen';
 
 
 const Drawer = createDrawerNavigator();
@@ -36,7 +35,6 @@ export default function Navigation() {
         <Drawer.Screen name="Menu" component={MenuStackNavigator} />
         <Drawer.Screen name="About Us" component={AboutUsScreen} />
         <Drawer.Screen name="Catering" component={CateringScreen} />
-        <Drawer.Screen name="Contact" component={ContactScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

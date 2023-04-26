@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, SectionList, Image, StyleSheet } from 'react-native';
-import menuItems from '../components/MenuItems';
+import MenuItems from '../components/MenuItems_Square';
 
 const MenuScreen = () => {
     const renderItem = ({ item }) => (
