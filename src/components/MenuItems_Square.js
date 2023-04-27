@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const MenuItems = () => {
+const useMenuItems = () => {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
@@ -13,18 +13,7 @@ const MenuItems = () => {
     fetchMenuItems();
   }, []);
 
-  const shawarmaWrap = menuItems.find(item => item.item_data.name === 'Shawarma Wrap');
-
-  return (
-    <>
-      {shawarmaWrap && (
-        <div>
-          <h2>{shawarmaWrap.item_data.name}</h2>
-          <p>{shawarmaWrap.item_data.description}</p>
-          {/* Render other item properties here */}
-        </div>
-      )}
-    </>
-  );
+  return menuItems;
 };
-export default MenuItems;
+
+export default useMenuItems;
