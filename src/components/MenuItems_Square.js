@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
-const useMenuItems = () => {
+
+const MenuItems = () => {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
@@ -13,7 +15,7 @@ const useMenuItems = () => {
     fetchMenuItems();
   }, []);
 
-  return menuItems;
-};
 
-export default useMenuItems;
+  
+};
+export default MenuItems;
