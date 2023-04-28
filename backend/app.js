@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 // Replace with your actual Square API access token
-const squareAccessToken = 'EAAAEFfkAgW4pkB8g-ZPcauYlvUHWXulU-Q3pdgcSoj_z0xa1q1sho5drf9IuNyC';
+const squareAccessToken = 'INSERT TOKEN';
 
 app.use(cors());
 
